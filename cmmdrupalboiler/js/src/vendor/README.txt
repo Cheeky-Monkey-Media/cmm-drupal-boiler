@@ -1,0 +1,1 @@
+Vendor JS files get placed here, most likely from the bower or node packages via the grunt copy task.

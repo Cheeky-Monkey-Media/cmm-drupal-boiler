@@ -1,0 +1,10 @@
+{
+  "name": "cmmdrupalboiler",
+  "private": "true",
+  "dependencies": {
+    "intentionjs": "0.9.9",
+    "underscore": "1.7.0",
+    "viewportsize": "latest",
+    "requirejs": "latest"
+  }
+}
