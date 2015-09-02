@@ -40,7 +40,7 @@ This will re-compile everything and minify the css and uglify/compress the JS, m
 
 **NOTES:
 
-In the badcamp2015 theme folder, there is a 'theme-functions.php'.  Which helps drupal determine, if we are on a 'development' environment or not.  
+In the theme folder, there is a 'theme-functions.php'.  Which helps drupal determine, if we are on a 'development' environment or not.  
 
 The cmm_is_dev_mode() method will preg_match the current URL check if 'dev' is part of the URL string.  If so, then we are in DEV mode.  Based on that, the other methods will use the the proper path to the JS files.
 
@@ -51,6 +51,8 @@ The "html.tpl.php" file will have this line:
 There you can see the methods at work, returning the proper paths, based on the 'environment'.
 
 When you run 'grunt build' the JS will get put into a 'dist' folder.  This is for production (with all the JS compression and CSS minification). This is also where the methods will point, for the JS on production type environments (everything but your local machine).
+
+Vendor specific JS should be stored in the js/src/vendor. Hopefully you can find vendor code in a bower or node package. Then you can add it to the grunt ‘copy’ task, which will store it in the appropriate vendor folder.
 
 
 
