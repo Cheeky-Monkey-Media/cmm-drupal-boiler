@@ -19,7 +19,7 @@ define([
    */
   Homepage.prototype.init = function() {
 		var self = this;
-		console.log("Homepage JS Init", self)
+		console.log("Homepage JS Init", self);
   };
 
   /**
