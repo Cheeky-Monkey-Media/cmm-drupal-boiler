@@ -19,6 +19,7 @@
     "grunt-contrib-requirejs": "~0.4.4",
     "grunt-contrib-uglify": "~0.3.3",
     "grunt-contrib-copy": "~0.8.0",
+    "grunt-svgmin": "latest",
     "node-bourbon": "~1.2.3"
   }
 }

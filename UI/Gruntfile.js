@@ -95,6 +95,20 @@ module.exports = function (grunt) {
     },
 
     /*
+     * svg minimize
+     */
+    svgmin: {
+      dist: {
+        files: [{
+          expand: true,
+          cwd: '<%= path_vars.theme_path %>/images/svg',
+          src: ['*.svg'],
+          dest: '<%= path_vars.theme_path %>/images/svg'
+        }]
+      }
+    },
+
+    /*
      * grunt compass
      */
     compass: {
@@ -194,6 +208,10 @@ module.exports = function (grunt) {
       js: {
         files: ['<%= jshint.all %>'],
         tasks: ['jshint', 'uglify']
+      },
+      svg: {
+        files: ['<%= path_vars.theme_path %>/images/svg/*.svg'],
+        tasks: ['newer:svgmin:dist']
       }
     }
   });
@@ -208,6 +226,7 @@ module.exports = function (grunt) {
     'clean',
     'compass:dev',
     'uglify',
+    'svgmin',
     'watch'
   ]);
 
@@ -220,6 +239,7 @@ module.exports = function (grunt) {
     'clean',
     'compass:build',
     'uglify',
+    'svgmin',
     'requirejs'
   ]);
 
