@@ -50,8 +50,5 @@ define([
     }
   });
 
-  IntentContext.horizontal_axis.respond();
-  $(window).on('resize', IntentContext.horizontal_axis.respond);
-
   return IntentContext;
 });

@@ -115,7 +115,7 @@ $font-weight-book: 400 !default;
 // $gainsboro   : #DDDDDD;
 // $iron        : #CCCCCC;
 // $base        : #AAAAAA;
-// $aluminum    : #999999;
+$aluminum    : #999999;
 // $jumbo       : #888888;
 // $monsoon     : #777777;
 // $steel       : #666666;
@@ -125,6 +125,7 @@ $oil            : #333333;
 // $jet         : #222222;
 $black          : #000000;
 $white          : #FFFFFF; // white
+$cornflowerblue : #6195ED; // lightish blue
 
 // We use these as default colors throughout
 //$primary-color: #008CBA;
@@ -134,10 +135,10 @@ $white          : #FFFFFF; // white
 // $warning-color: #f08a24;
 // $info-color: #a0d3e8;
 
-$primary-color: $black;
+$primary-color: $cornflowerblue;
 
 // We use these to control various global styles
-$body-bg: $white;
+$body-bg: $oil;
 
 // $body-font-color: $jet;
 // $body-font-family: $font-family-sans-serif;
@@ -472,9 +473,9 @@ $button-font-med: rem-calc(13);
 // $button-function-factor: -20%;
 
 // We use these to control button border and hover styles.
-$button-border-width: 2px;
+$button-border-width: 0px;
 $button-border-style: solid;
-$button-bg-color: transparent;
+$button-bg-color: $oil;
 // $button-bg-hover: scale-color($button-bg-color, $lightness: $button-function-factor);
 $button-border-color: $charcoal;
 // $secondary-button-bg-hover: scale-color($secondary-color, $lightness: $button-function-factor);
@@ -485,7 +486,7 @@ $button-border-color: $charcoal;
 // $alert-button-border-color: $alert-button-bg-hover;
 
 // We use this to set the default radius used throughout the core.
-$button-radius: 2px;
+$button-radius: 4px;
 // $button-round: $global-rounded;
 
 // We use this to set default opacity and cursor for disabled buttons.
@@ -499,7 +500,7 @@ $button-radius: 2px;
 
 // Sets the margin for the right side by default, and the left margin if right-to-left direction is used
 // $button-bar-margin-opposite: rem-calc(10);
-// $button-group-border-width: 1px;
+// $button-group-border-width: 0px;
 
 // 07. Clearing
 // - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -981,7 +982,7 @@ $button-radius: 2px;
 // $include-html-panel-classes: $include-html-classes;
 
 // We use these to control the background and border styles
-// $panel-bg: scale-color($white, $lightness: -5%);
+ $panel-bg: scale-color($oil, $lightness: +5%);
 // $panel-border-style: solid;
 // $panel-border-size: 1px;
 
@@ -994,7 +995,7 @@ $button-radius: 2px;
 // $panel-padding: rem-calc(20);
 
 // We use these to set default font colors
-// $panel-font-color: $oil;
+$panel-font-color: $white;
 // $panel-font-color-alt: $white;
 
 // $panel-header-adjust: true;

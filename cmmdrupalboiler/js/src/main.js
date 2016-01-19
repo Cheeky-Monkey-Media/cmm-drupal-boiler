@@ -22,6 +22,7 @@ requirejs.config({
     'jquery': 'modules/jquery-global',
     'intentcontext': 'modules/intentcontext',
     'homepage': 'modules/homepage',
+    'initintent': 'modules/initintent'
   },
   shim: {
   },
@@ -47,16 +48,13 @@ require([
    // DOM ready
   $(function() {
 
-    // init the DOM elements with intentionJS
-    IntentContext.intent.elements(document);
-
-    IntentContext.intent.on('desktop', function () { });
-    IntentContext.intent.on('tablet', function () { });
-    IntentContext.intent.on('mobile', function () { });
-
     // js loaded only on homepage
     if ($('body').hasClass('front')) {
       require(['homepage']);
+    }
+
+    if ($('html').length > 0) {
+      require(['initintent']);
     }
 
   }); // DOM ready
