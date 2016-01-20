@@ -30,6 +30,7 @@ define([
      * initialize all contexts for the axis(s)
      */
     IntentContext.horizontal_axis.respond();
+    IntentContext.intent.elements(document);
     $(window).on('resize', IntentContext.horizontal_axis.respond);
   };
 
